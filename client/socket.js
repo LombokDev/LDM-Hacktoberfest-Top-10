@@ -1,5 +1,6 @@
-var socket = io.connect('http://localhost:5000');
+var socket = io.connect('https://ldm5hacktoberfest.herokuapp.com');
 socket.on('top-ten', (data) => {
+  console.log(data)
   var content = makeTop10(data)
   $("#top10-lists").html(content)
 })
